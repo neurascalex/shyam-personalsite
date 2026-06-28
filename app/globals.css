@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-bg: #041B1F;
+    --color-bg-alt: #06262C;
+    --color-gold: #C5A059;
+    --color-gold-light: #D4B67D;
+    --color-teal: #144D58;
+    --color-teal-light: #1D6B7A;
+    --color-cream: #F8F5F0;
+  }
+
+  body {
+    @apply bg-bg text-cream font-sans font-light leading-relaxed;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer utilities {
+  .geometric-lines {
+    background-image: linear-gradient(rgba(163, 217, 207, 0.05) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(163, 217, 207, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+  
+  .gold-glow:hover {
+    box-shadow: 0 0 30px rgba(197, 160, 89, 0.3);
+  }
+  
+  .bg-radial-gradient {
+    background: radial-gradient(circle, rgba(197, 160, 89, 0.1) 0%, transparent 70%);
+  }
+}
